@@ -57,6 +57,8 @@ A single **preset table** — the currently selected route for the currently sel
       n = true,
     },
   }
+
+Every object has a d array; lines/arrows also have l (and arrows have t); notes have n = true.
 ```  
 I need at least:
 - text
