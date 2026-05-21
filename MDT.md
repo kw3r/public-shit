@@ -28,7 +28,7 @@ A single **preset table** — the currently selected route for the currently sel
 | `objects` | table | Free-draw annotations (lines, notes, arrows). |
 | `colorPaletteInfo` | table | `{ autoColoring = bool, colorPaletteIdx = number }`. |
 | `mdiEnabled`, `createdBy`, etc. | various | Optional metadata. |
-
+```
   preset.value.pulls = {
     [1] = {                      -- pull #1
       ["color"] = "0FB407",      -- meta option: hex RGB of the pull
@@ -41,7 +41,7 @@ A single **preset table** — the currently selected route for the currently sel
     },
     [3] = {},                    -- an empty pull is just {}
   }
-  
+```  
 I need at least:
 - text
 - value.pulls
