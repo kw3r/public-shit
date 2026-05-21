@@ -29,8 +29,24 @@ A single **preset table** — the currently selected route for the currently sel
 | `colorPaletteInfo` | table | `{ autoColoring = bool, colorPaletteIdx = number }`. |
 | `mdiEnabled`, `createdBy`, etc. | various | Optional metadata. |
 
-It always returns a live reference (callers mutate it directly, e.g. `MDT:GetCurrentPreset().week = key`). It assumes the dungeon/preset indices are valid — no nil-guard.
-
+  preset.value.pulls = {
+    [1] = {                      -- pull #1
+      ["color"] = "0FB407",      -- meta option: hex RGB of the pull
+      ["12"]    = { 1, 2, 3 },   -- enemyIdx 12  → cloneIdx list {1,2,3}
+      ["47"]    = { 5 },         -- enemyIdx 47  → cloneIdx {5}
+    },
+    [2] = {                      -- pull #2
+      ["color"] = "B40FA1",
+      ["3"]     = { 1, 4 },
+    },
+    [3] = {},                    -- an empty pull is just {}
+  }
+  
+I need at least:
+- text
+- value.pulls
+- objects
+  
 ---
 
 ## 2. `MDT.dungeonEnemies` — table
