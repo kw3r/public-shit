@@ -41,6 +41,22 @@ A single **preset table** — the currently selected route for the currently sel
     },
     [3] = {},                    -- an empty pull is just {}
   }
+
+  preset.objects = {
+    [1] = {                                   -- a LINE / PENCIL stroke
+      d = { 3, 1.1, 1, true, "ff0000", -8, true },
+      l = { 120.5, -88.2, 140.0, -90.1, 155.3, -91.0 },
+    },
+    [2] = {                                   -- an ARROW
+      d = { 11, 1, 1, true, "00b3ff", -8 },
+      l = { 200.0, -100.0, 260.0, -130.0 },
+      t = { 2.3561 },
+    },
+    [3] = {                                   -- a NOTE (text label)
+      d = { 305.7, -210.4, 1, true, "Interrupt here" },
+      n = true,
+    },
+  }
 ```  
 I need at least:
 - text
