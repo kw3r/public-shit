@@ -10,10 +10,6 @@ function MDT:GetCurrentPreset()
 end
 ```
 
-### Input
-
-- **None.** It is a method (call with `:`), so it implicitly takes `self`. It reads global state: `db.currentDungeonIdx` (selected dungeon) and `db.currentPreset[dungeonIdx]` (selected preset index for that dungeon).
-
 ### Output
 
 A single **preset table** — the currently selected route for the currently selected dungeon. Structure:
